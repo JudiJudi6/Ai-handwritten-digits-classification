@@ -37,7 +37,7 @@ export default function Home() {
         .mul(tf.scalar(-1))
         .add(tf.scalar(255));
 
-      const prediction = model.predict(tensor);
+      const prediction: any = model.predict(tensor);
       const predictionArray = await prediction.array();
 
       const predictedDigitIndex = predictionArray[0].indexOf(
